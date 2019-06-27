@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="99" id="TTH-8K-3f9" customClass="ProfileTableViewCell" customModule="BluetoothDetection" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TTH-8K-3f9" id="Qgd-uo-XzK">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="98.666666666666671"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okp-Bh-yfz">
+                        <rect key="frame" x="15" y="41" width="110" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="QV5-95-KcH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr Firstname LASTNAME" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bae-jL-UCf">
+                        <rect key="frame" x="165" y="40.333333333333336" width="239" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Bae-jL-UCf" secondAttribute="trailing" constant="20" id="5wH-Da-mUz"/>
+                    <constraint firstItem="Bae-jL-UCf" firstAttribute="leading" secondItem="Okp-Bh-yfz" secondAttribute="trailing" constant="70" id="91T-Bq-YlU">
+                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                    </constraint>
+                    <constraint firstItem="Bae-jL-UCf" firstAttribute="centerY" secondItem="Qgd-uo-XzK" secondAttribute="centerY" id="ClD-Vh-24r"/>
+                    <constraint firstItem="Okp-Bh-yfz" firstAttribute="leading" secondItem="Qgd-uo-XzK" secondAttribute="leading" constant="15" id="N7j-X8-p8z"/>
+                    <constraint firstItem="Okp-Bh-yfz" firstAttribute="centerY" secondItem="Qgd-uo-XzK" secondAttribute="centerY" id="t00-RS-gDo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="contentLabel" destination="Bae-jL-UCf" id="Xhg-c4-U1q"/>
+                <outlet property="headerLabel" destination="Okp-Bh-yfz" id="KTN-JS-Qe8"/>
+            </connections>
+            <point key="canvasLocation" x="-78.400000000000006" y="60.221674876847295"/>
+        </tableViewCell>
+    </objects>
+</document>

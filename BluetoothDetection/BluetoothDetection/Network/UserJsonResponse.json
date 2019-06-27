@@ -1,0 +1,55 @@
+{
+    "status": 200,
+    
+    "list" : [{
+        "firstname": "John",
+        "lastname": "TOTO",
+        "deviceID": "Jane Doe",
+        "email": "john.toto@test.com",
+        "phone": "0143288924",
+        "loyaltyStatus": "VIP",
+        "lifetimeValue": 87000,
+        "store": "Paris - 7 bis Avenue Montaigne",
+        "activity": 4,
+        "description": "Client qui aime bien la maroquinerie"
+    },
+    
+    {
+        "firstname": "Alex",
+        "lastname": "DUPONT",
+        "deviceID": "John Doe",
+        "email": "alex@test.com",
+        "phone": "0144223354",
+        "loyaltyStatus": "VIP",
+        "lifetimeValue": 89,
+        "store": "Levallois - 3 rue CDG",
+        "activity": 1,
+        "description": "Client qui aime bien les chaussure"
+    },
+    
+    {
+        "firstname": "Elise",
+        "lastname": "DURAND",
+        "deviceID": "TEST A",
+        "email": "elise@test",
+        "phone": "0144532435",
+        "loyaltyStatus": "VIP",
+        "lifetimeValue": 95000,
+        "store": "Paris - 45 boulevard Soult",
+        "activity": 5,
+        "description": "Client qui aime bien les montres"
+    },
+    
+    {
+        "firstname": "Romain",
+        "lastname": "Desmain",
+        "deviceID": "TEST B",
+        "email": "romain@test.com",
+        "phone": "0943445327",
+        "loyaltyStatus": "VIP",
+        "lifetimeValue": 45000,
+        "store": "Motreuil - 25 rue des cerisiers",
+        "activity": 3,
+        "description": "Client qui aime bien la couleur jaune"
+    }]
+}

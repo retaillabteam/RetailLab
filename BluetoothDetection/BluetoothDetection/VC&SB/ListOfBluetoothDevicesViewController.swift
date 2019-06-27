@@ -40,9 +40,6 @@ class ListOfBluetoothDevicesViewController: UIViewController {
         
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: false])
         
-        self.view.backgroundColor = .white
-        
-        tableView.backgroundColor = .clear
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()

@@ -11,7 +11,7 @@
 		9B302D6722BCD755001B46C5 /* PictureProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B302D6622BCD755001B46C5 /* PictureProfileTableViewCell.swift */; };
 		9B32E60E22C20D26009E8A1F /* UIRoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32E60D22C20D26009E8A1F /* UIRoundedImageView.swift */; };
 		9B32E61122C265DB009E8A1F /* MyAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32E61022C265DB009E8A1F /* MyAttributes.swift */; };
-		9B32E61322C2673B009E8A1F /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32E61222C2673B009E8A1F /* extensions.swift */; };
+		9B32E61322C2673B009E8A1F /* SystemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B32E61222C2673B009E8A1F /* SystemColor.swift */; };
 		9B4E7A9122B2452A0074B6F9 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4E7A9022B2452A0074B6F9 /* ProfileTableViewCell.xib */; };
 		9B4E7A9922B248FE0074B6F9 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E7A9822B248FE0074B6F9 /* ProfileTableViewCell.swift */; };
 		9B5E5B772292A3E200424F45 /* UserJsonResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B5E5B762292A3E200424F45 /* UserJsonResponse.json */; };
@@ -30,7 +30,7 @@
 		9B302D6622BCD755001B46C5 /* PictureProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B32E60D22C20D26009E8A1F /* UIRoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedImageView.swift; sourceTree = "<group>"; };
 		9B32E61022C265DB009E8A1F /* MyAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAttributes.swift; sourceTree = "<group>"; };
-		9B32E61222C2673B009E8A1F /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		9B32E61222C2673B009E8A1F /* SystemColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColor.swift; sourceTree = "<group>"; };
 		9B4E7A9022B2452A0074B6F9 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		9B4E7A9822B248FE0074B6F9 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B5E5B762292A3E200424F45 /* UserJsonResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserJsonResponse.json; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9B32E61022C265DB009E8A1F /* MyAttributes.swift */,
-				9B32E61222C2673B009E8A1F /* extensions.swift */,
+				9B32E61222C2673B009E8A1F /* SystemColor.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 				9B302D6722BCD755001B46C5 /* PictureProfileTableViewCell.swift in Sources */,
 				9B5E5B792292A4D500424F45 /* UserModel.swift in Sources */,
 				9B6EE052228AED180030C196 /* ListOfBluetoothDevicesViewController.swift in Sources */,
-				9B32E61322C2673B009E8A1F /* extensions.swift in Sources */,
+				9B32E61322C2673B009E8A1F /* SystemColor.swift in Sources */,
 				9B32E61122C265DB009E8A1F /* MyAttributes.swift in Sources */,
 				9B4E7A9922B248FE0074B6F9 /* ProfileTableViewCell.swift in Sources */,
 				9B6EE050228AED180030C196 /* AppDelegate.swift in Sources */,

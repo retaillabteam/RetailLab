@@ -156,6 +156,8 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
         if devices.filter({ $0.periphName == peripheral.name }).count == 0 {
             let newDevice = Device(periphName: peripheral.name, manufacturedID: deviceID, brandID: brandID, isTagHeuer: brandID == "0 " ? true : false)
             
+            
+            //-- List of fake users
             let newDevice2 = Device(periphName: "newDevice2", manufacturedID: "TEST A", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
             let newDevice3 = Device(periphName: "newDevice3", manufacturedID: "John Doe", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
             let newDevice4 = Device(periphName: "newDevice4", manufacturedID: "TEST B", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
@@ -166,7 +168,8 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
             devices.append(newDevice3)
             devices.append(newDevice4)
             devices.append(newDevice5)
-
+            //--
+            
             self.tableView.reloadData()
             self.prompt(newDevice)
         }
@@ -186,12 +189,12 @@ extension ListOfBluetoothDevicesViewController: UITableViewDataSource {
 
         let mainLabelAttributes = NSMutableAttributedString(string: "manufacturer data:   ",
                                                             attributes: MyAttributes.attributesContentLabel())
-        mainLabelAttributes.append(NSMutableAttributedString(string: "\(self.devices[indexPath.row].manufacturedID ?? "")",
+        mainLabelAttributes.append(NSMutableAttributedString(string: "\(self.devices[indexPath.row].manufacturedID ?? "--")",
                                                              attributes: MyAttributes.attributesContentValue()))
 
         let detailLabelAttributes = NSMutableAttributedString(string: "device name:              ",
                                                               attributes: MyAttributes.attributesContentLabel())
-        detailLabelAttributes.append(NSMutableAttributedString(string: "\(self.devices[indexPath.row].periphName ?? "")",
+        detailLabelAttributes.append(NSMutableAttributedString(string: "\(self.devices[indexPath.row].periphName ?? "--")",
                                                                attributes: MyAttributes.attributesContentValue()))
 
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellReuseIdentifier)
@@ -232,5 +235,3 @@ extension ListOfBluetoothDevicesViewController: UITableViewDelegate {
         }
     }
 }
-
-// https://www.kevinhoyt.com/2016/05/20/the-12-steps-of-bluetooth-swift/

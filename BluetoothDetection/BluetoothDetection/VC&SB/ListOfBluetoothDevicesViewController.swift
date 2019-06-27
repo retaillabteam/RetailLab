@@ -138,7 +138,7 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
 
         guard let _ = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataLocalNameKey) as? NSString else { return }
         guard let data = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataManufacturerDataKey) as? Data else { return }
-        guard let manufacturerID = String(data: data, encoding: .utf8) else { return }
+        guard let manufacturerID = String(data: data, encoding: .utf8), manufacturerID.count > 2 else { return }
 
         var start = manufacturerID.startIndex
         var end = manufacturerID.index(manufacturerID.startIndex, offsetBy: 2)

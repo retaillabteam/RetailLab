@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="629" height="427.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Uw5-uf-wvo" customClass="UIRoundedImageView" customModule="BluetoothDetection" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile3" translatesAutoresizingMaskIntoConstraints="NO" id="Uw5-uf-wvo" customClass="UIRoundedImageView" customModule="BluetoothDetection" customModuleProvider="target">
                         <rect key="frame" x="116" y="15" width="397.5" height="397.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -46,6 +46,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="profile" width="232.5" height="232.5"/>
+        <image name="profile3" width="1024" height="1024"/>
     </resources>
 </document>

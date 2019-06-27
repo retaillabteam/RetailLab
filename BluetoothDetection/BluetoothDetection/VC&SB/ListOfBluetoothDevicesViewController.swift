@@ -34,6 +34,10 @@ class ListOfBluetoothDevicesViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 
+//        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.LaunchOptionsKey.bluetoothCentrals, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.LaunchOptionsKey.bluetoothPeripherals, object: nil)
+
+        
         manager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: false])
         
         self.view.backgroundColor = .white
@@ -139,7 +143,7 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
         guard let data = (advertisementData as NSDictionary).object(forKey: CBAdvertisementDataManufacturerDataKey) as? Data else { return }
         guard let manufacturerID = String(data: data, encoding: .utf8) else { return }
 
-        var start = manufacturerID.index(manufacturerID.startIndex, offsetBy: 0)
+        var start = manufacturerID.startIndex
         var end = manufacturerID.index(manufacturerID.startIndex, offsetBy: 2)
         var range = start..<end
         let brandID = String(manufacturerID[range])
@@ -149,13 +153,14 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
         }
 
         start = manufacturerID.index(manufacturerID.startIndex, offsetBy: 2)
-        end = manufacturerID.index(manufacturerID.endIndex, offsetBy: 0)
+        end = manufacturerID.endIndex
         range = start..<end
         let deviceID = String(manufacturerID[range])
         
         if devices.filter({ $0.periphName == peripheral.name }).count == 0 {
             let newDevice = Device(periphName: peripheral.name, manufacturedID: deviceID, brandID: brandID, isTagHeuer: brandID == "0 " ? true : false)
-            
+
+            devices.append(newDevice)
             
             //-- List of fake users
             let newDevice2 = Device(periphName: "newDevice2", manufacturedID: "TEST A", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
@@ -163,7 +168,6 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
             let newDevice4 = Device(periphName: "newDevice4", manufacturedID: "TEST B", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
             let newDevice5 = Device(periphName: "newDevice5", manufacturedID: "TEST Z", brandID: "0 ", isTagHeuer: brandID == "0 " ? true : false)
 
-            devices.append(newDevice)
             devices.append(newDevice2)
             devices.append(newDevice3)
             devices.append(newDevice4)
@@ -173,6 +177,12 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
             self.tableView.reloadData()
             self.prompt(newDevice)
         }
+    }
+    
+    func centralManager(_ central: CBCentralManager, willRestoreState dict: [String : Any]) {
+        
+        let peripherals = dict[CBCentralManagerRestoredStatePeripheralsKey]
+        
     }
 }
 

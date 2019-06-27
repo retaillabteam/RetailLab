@@ -2,16 +2,16 @@
     "status": 200,
     
     "list" : [{
-        "firstname": "John",
-        "lastname": "TOTO",
+        "firstname": "Sarah",
+        "lastname": "Alicante",
         "deviceID": "Jane Doe",
-        "email": "john.toto@test.com",
+        "email": "sarah.alicante@test.com",
         "phone": "0143288924",
         "loyaltyStatus": "VIP",
         "lifetimeValue": 87000,
         "store": "Paris - 7 bis Avenue Montaigne",
         "activity": 4,
-        "description": "Client qui aime bien la maroquinerie"
+        "description": "Sarah est une client fidèle et précise sur ses besoins. Elle est interessé par la décoration d'intérieur."
     },
     
     {
@@ -24,7 +24,7 @@
         "lifetimeValue": 89,
         "store": "Levallois - 3 rue CDG",
         "activity": 1,
-        "description": "Client qui aime bien les chaussure"
+        "description": "Alex est un client qui apprécie particulièrement le travail du cuir."
     },
     
     {
@@ -37,7 +37,7 @@
         "lifetimeValue": 95000,
         "store": "Paris - 45 boulevard Soult",
         "activity": 5,
-        "description": "Client qui aime bien les montres"
+        "description": "Cliente qui achète principalement pour son époux. Des montres classiques"
     },
     
     {
@@ -50,6 +50,6 @@
         "lifetimeValue": 45000,
         "store": "Motreuil - 25 rue des cerisiers",
         "activity": 3,
-        "description": "Client qui aime bien la couleur jaune"
+        "description": "Client qui est fan de la nature"
     }]
 }

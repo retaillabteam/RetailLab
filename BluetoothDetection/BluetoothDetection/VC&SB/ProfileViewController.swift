@@ -70,11 +70,26 @@ extension ProfileViewController: UITableViewDataSource {
         return indexPath.row == 0 ? 300 : 50
     }
     
+    func getImageBy(id: String) -> String { // FOR DEMO ONLY
+        switch id {
+        case "Jane Doe":
+            return "profile"
+        case "TEST A":
+            return "profile3"
+        case "John Doe":
+            return "profile2"
+        case "TEST B":
+            return "profile4"
+        default:
+            return "defaultProfile"
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
         case 0:
-            return CellType.profilePic(UIImage(named: "profile")!, tableView).cell
+            return CellType.profilePic(UIImage(named: getImageBy(id: data?.deviceID ?? ""))!, tableView).cell
         case 1:
             return CellType.personMainInfo("Full name", "\(self.data?.firstname ?? "") \(self.data?.lastname ?? "")", tableView).cell
         case 2:

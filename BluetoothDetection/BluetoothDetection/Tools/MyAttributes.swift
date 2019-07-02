@@ -20,8 +20,7 @@ class MyAttributes {
     static func attributesContentValue() -> [NSAttributedString.Key : Any] {
         let attributesContentValue: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 16),
-            .foregroundColor: UIColor.darkText
-        ]
+            .foregroundColor: UIColor.black]
         return attributesContentValue
     }
 }

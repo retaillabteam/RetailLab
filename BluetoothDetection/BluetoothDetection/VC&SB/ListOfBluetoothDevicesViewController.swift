@@ -93,10 +93,10 @@ extension ListOfBluetoothDevicesViewController: CBCentralManagerDelegate {
                 self.activityIndicator.startAnimating()
             }
             //-- List of fake users - FOR DEMO ONLY
-//            let newDevice2 = Device(periphName: "newDevice2", manufacturedID: "TEST A", brandID: tagHeuerID, isTagHeuer: true)
-//            let newDevice3 = Device(periphName: "newDevice3", manufacturedID: "John Doe", brandID: tagHeuerID, isTagHeuer: true)
-//            let newDevice4 = Device(periphName: "newDevice4", manufacturedID: "TEST B", brandID: tagHeuerID, isTagHeuer: true)
-//            let newDevice5 = Device(periphName: "newDevice5", manufacturedID: "TEST Z", brandID: tagHeuerID, isTagHeuer: true)
+//            let newDevice2 = Device(periphName: "newDevice2", periphUUID:"uuidTEST", manufacturedID: "TEST A", brandID: tagHeuerID, isTagHeuer: true)
+//            let newDevice3 = Device(periphName: "newDevice3", periphUUID:"uuidTEST", manufacturedID: "John Doe", brandID: tagHeuerID, isTagHeuer: true)
+//            let newDevice4 = Device(periphName: "newDevice4", periphUUID:"uuidTEST", manufacturedID: "TEST B", brandID: tagHeuerID, isTagHeuer: true)
+//            let newDevice5 = Device(periphName: "newDevice5", periphUUID:"uuidTEST", manufacturedID: "TEST Z", brandID: tagHeuerID, isTagHeuer: true)
 //
 //            devices.append(newDevice2)
 //            devices.append(newDevice3)
@@ -238,13 +238,12 @@ extension ListOfBluetoothDevicesViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else { return }
 
-        if let manufacturedID = devices[indexPath.row].manufacturedID {
+        if let manufacturedID = devices[indexPath.row].manufacturedID, devices[indexPath.row].brandID == self.tagHeuerID {
             FakeApiCalling().getModel(ofType: Response.self) { result in
                 switch result {
                 case .success(let model):
                     guard let userModel = model.list.filter( {$0.deviceID == manufacturedID} ).first else {
-                        let message = self.devices[indexPath.row].brandID == self.tagHeuerID ? "Missing profile" : "Not a TAG HEUER device."
-                        self.buildAlertControllerWithoutAction(title: "Attention", message: message)
+                        self.buildAlertControllerWithoutAction(title: "Attention", message: "Missing profile")
                         return
                     }
                     vc.data = userModel

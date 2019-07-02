@@ -18,10 +18,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Profile"
-//     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//     self.navigationController?.navigationBar.shadowImage = UIImage()
-//     self.navigationController?.navigationBar.isTranslucent = true
-//     self.navigationController?.navigationBar.tintColor = UIColor.white
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,6 +27,13 @@ class ProfileViewController: UIViewController {
         tableView.register(UINib.init(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         tableView.register(UINib.init(nibName: "PictureProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureProfileTableViewCell")
         tableView.reloadData()
+    }
+}
+
+extension ProfileViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row == 0 ? 300 : UITableView.automaticDimension
     }
 }
 
@@ -64,10 +67,6 @@ extension ProfileViewController: UITableViewDataSource {
                 return cell
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 300 : UITableView.automaticDimension
     }
     
     func getImageBy(id: String) -> String { // FOR DEMO ONLY
@@ -117,8 +116,4 @@ extension ProfileViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-}
-
-extension ProfileViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
 }

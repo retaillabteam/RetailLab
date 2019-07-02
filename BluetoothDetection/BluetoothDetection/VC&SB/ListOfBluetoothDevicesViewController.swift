@@ -46,7 +46,6 @@ class ListOfBluetoothDevicesViewController: UIViewController {
         tableView.allowsSelection = true
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.register(UINib.init(nibName: "BLEDeviceTableViewCell", bundle: nil), forCellReuseIdentifier: "BLEDeviceTableViewCell")
-
     }
 
     @objc private func stopScanning() {

@@ -67,7 +67,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 300 : 50
+        return indexPath.row == 0 ? 300 : UITableView.automaticDimension
     }
     
     func getImageBy(id: String) -> String { // FOR DEMO ONLY
